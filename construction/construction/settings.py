@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#(a8h2vus63nef5m839nklpd8vto==2d(cygoccgv#yfxl^*)0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'lebtech.ltd']
+ALLOWED_HOSTS = [lebtech.ltd]
 
 
 # Application definition
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'construction.wsgi.application'
+# WSGI_APPLICATION = 'construction.wsgi.application'
 
 
 # Database
@@ -122,6 +122,7 @@ USE_TZ = True
 # STATIC_URL = 'static/'
 
 STATIC_URL = 'static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
