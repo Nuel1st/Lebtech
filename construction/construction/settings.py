@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#(a8h2vus63nef5m839nklpd8vto==2d(cygoccgv#yfxl^*)0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [lebtech.ltd]
+ALLOWED_HOSTS = ['lebtech-c9538ae7839b.herokuapp.com', '127.0.0.1', 'lebtech.ltd']
 
 
 # Application definition
@@ -119,10 +119,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # STATIC_URL = 'static/'
 
 STATIC_URL = 'static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
